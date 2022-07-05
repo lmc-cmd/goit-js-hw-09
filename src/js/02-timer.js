@@ -34,11 +34,11 @@ const options = {
 flatpickr(dateInputEl, options);
 
 btnStartEl.addEventListener(`click`, e => {
-  countDown = setInterval(() => {
+  setInterval(() => {
     const diff = userDate - Date.now();
     let convertDiff = convertMs(diff);
     if (diff < 0) {
-      stop(countDown);
+      stop();
       return;
     }
 
