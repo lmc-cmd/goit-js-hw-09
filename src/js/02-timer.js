@@ -38,8 +38,8 @@ btnStartEl.addEventListener(`click`, e => {
     const diff = userDate - Date.now();
     let convertDiff = convertMs(diff);
     if (diff < 0) {
-      clearInterval(IntervalId);
       Notiflix.Notify.info('BOOM');
+      clearInterval(IntervalId);
       return;
     }
 
