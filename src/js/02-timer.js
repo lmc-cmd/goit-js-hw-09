@@ -13,7 +13,7 @@ const secondsEl = timerContainerEl.querySelector(`[data-seconds]`);
 
 btnStartEl.disabled = true;
 let userDate = null;
-
+let IntervalId = null;
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -34,11 +34,12 @@ const options = {
 flatpickr(dateInputEl, options);
 
 btnStartEl.addEventListener(`click`, e => {
-  setInterval(() => {
+  IntervalId = setInterval(() => {
     const diff = userDate - Date.now();
     let convertDiff = convertMs(diff);
     if (diff < 0) {
-      stop();
+      clearInterval(IntervalId);
+      Notiflix.Notify.info('BOOM');
       return;
     }
 
