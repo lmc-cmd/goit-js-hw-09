@@ -30,6 +30,7 @@ const options = {
     return userDate;
   },
 };
+
 flatpickr(dateInputEl, options);
 
 btnStartEl.addEventListener(`click`, e => {
