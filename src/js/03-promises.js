@@ -1,12 +1,18 @@
 import Notiflix from 'notiflix';
 
 function createPromise(position, delay) {
+  delay = 1000;
   const shouldResolve = Math.random() > 0.3;
   if (shouldResolve) {
-    // Fulfill
+    Notiflix.Notify.success(`Fullfield `);
   } else {
-    // Reject
+    Notiflix.Notify.failure(`err`);
   }
+}
+
+for (let i = createPromise(); i > 5; i + 1) {
+  position = i;
+  delai += delai;
 }
 
 // const promise = new Promise((resolve, reject) => {
