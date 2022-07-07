@@ -47,6 +47,7 @@ btnStartEl.addEventListener(`click`, e => {
     hoursEl.textContent = addLeadingZero(convertDiff.hours);
     minutesEl.textContent = addLeadingZero(convertDiff.minutes);
     secondsEl.textContent = addLeadingZero(convertDiff.seconds);
+    btnStartEl.disabled = true;
   }, 1000);
 });
 
