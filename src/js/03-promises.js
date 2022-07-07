@@ -9,7 +9,7 @@ formEl.addEventListener(`submit`, e => {
   let stepDelay = e.currentTarget.elements.step.value;
   let delay = stepDelay;
   let amount = e.currentTarget.elements.amount.value;
-
+  let intervalId;
   setTimeout(() => {
     setInterval,
       (intervalId = setInterval(function () {
