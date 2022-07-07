@@ -5,9 +5,9 @@ formEl.addEventListener(`submit`, e => {
   e.preventDefault();
 
   let count = 0;
-  startDelay = e.currentTarget.elements.delay.value;
-  stepDelay = e.currentTarget.elements.step.value;
-  delay = stepDelay;
+  let startDelay = e.currentTarget.elements.delay.value;
+  let stepDelay = e.currentTarget.elements.step.value;
+  let delay = stepDelay;
   let amount = e.currentTarget.elements.amount.value;
 
   setTimeout(() => {
