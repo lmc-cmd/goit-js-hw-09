@@ -4,7 +4,7 @@ const formEl = document.querySelector('.form');
 formEl.addEventListener(`submit`, e => {
   e.preventDefault();
 
-  count = 0;
+  let count = 0;
   startDelay = e.currentTarget.elements.delay.value;
   stepDelay = e.currentTarget.elements.step.value;
   delay = stepDelay;
